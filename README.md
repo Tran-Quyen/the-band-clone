@@ -2,6 +2,15 @@
 ## Author: Dang Tran Quyen
 
 ### 1.Analyst the web
+1. Header
+2. Content
+   1. Slider/Carousel/Banner
+   2. The band
+   3. Tour
+   4. Contact
+3. Footer
+   1. Map
+   2. Social
 ### 2.Write base code
 ### 3.Write detail like analyst
 ### 4.Fix Bugs

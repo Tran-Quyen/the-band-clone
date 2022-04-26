@@ -5,12 +5,205 @@
   box-sizing: border-box;
 }
 
+/*
+* Analyst
+- Overview --> Detail
+- Top --> Bottom
+- Left --> Right
+
+* PSCT
+- Position
+- Size
+- Color
+- Type
+*/
+
+/* Config */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&display=swap');
+
 html {
   font-size: 62.5%;
   line-height: 1.4;
+  font-family: 'Lato', sans-serif;
 }
 
-#app{
+a,
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Variable */
+:root {
+  --header-height: 4.8rem;
+}
+
+/* Common */
+.wrapper {
+  padding: 6.4rem 0;
+  width: 80rem;
+  margin: 0 auto;
+}
+
+.band-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 4px;
+}
+
+.band-slogan {
+  text-align: center;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+/* App */
+#app {
   font-size: 1.6rem;
 }
 
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: var(--header-height);
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navbar */
+.header .nav-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .nav-list .nav-item {
+  position: relative;
+}
+
+.header .nav-item a {
+  display: block;
+  height: var(--header-height);
+  line-height: var(--header-height);
+  text-transform: uppercase;
+  padding: 0 2.4rem;
+  color: #fff;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.header .nav-item:last-child a {
+  padding-right: 2.5rem;
+}
+
+.header .nav-item:last-child a > i {
+  position: absolute;
+  top: 44%;
+  right: 1rem;
+  transform: translateY(-50%);
+}
+
+.header .nav-item:hover > a {
+  color: #000;
+  background: #ccc;
+}
+
+.header .nav-item:hover > .subnav-list {
+  display: block;
+}
+
+.header .nav-item .subnav-list {
+  display: none;
+  list-style-type: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.15);
+  min-width: 16rem;
+  z-index: 2;
+}
+
+.header .subnav-list .subnav-item {
+}
+
+.header .subnav-item a {
+  color: #000;
+  text-transform: none;
+}
+
+.header .subnav-item:hover > a {
+  background: #ccc;
+}
+
+/* Search Button */
+.header .search-btn {
+  width: 6.4rem;
+  height: var(--header-height);
+  outline: none;
+  border: none;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.header .search-btn:hover {
+  background: #f44336;
+}
+
+/* Main */
+.main {
+  margin-top: var(--header-height);
+}
+
+/* Slider */
+.main .carousel-caption p {
+  text-shadow: 1rem 5px 10px rgba(0, 0, 0, 0.15), -1rem -5px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* The Band */
+.main .the-band .band-description {
+  text-align: justify;
+  font-size: 1.5rem;
+}
+
+.main .member-list {
+  margin: 7rem 0 4.6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main .member-item {
+  text-align: center;
+  flex: 1 0 calc(100% / 3);
+}
+
+.main .member-name {
+  margin-bottom: 1.5rem;
+}
+
+.main .member-img {
+  width: 60%;
+}
+
+/* Tour Date */
+.main .tour{
+  background: #000;
+}
+
+.main .tour .band-title,.main .tour .band-slogan{
+  color: #fff;
+}

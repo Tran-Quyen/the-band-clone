@@ -5,24 +5,266 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Band Clone</title>
+    <!-- Logo -->
     <link rel="shortcut icon" href="./assets/images/logo/logo192.png" type="image/png" />
+    <!-- Font-icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- BS 4.6 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+      integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/js/main.js"></script>
   </head>
 
   <body>
     <div id="app">
-      <div class="header"></div>
+      <!-- Begin: Header -->
+      <div class="header">
+        <!-- Begin: Navbar -->
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#main">Home</a></li>
+          <li class="nav-item"><a href="#the-band">Band</a></li>
+          <li class="nav-item"><a href="#tour">Tour</a></li>
+          <li class="nav-item"><a href="#contact">Contact</a></li>
+          <li class="nav-item">
+            <a href="!#">More <i class="fa-solid fa-sort-down"></i> </a>
 
-      <div class="main">
-        <div class="band-slider"></div>
-        <div class="the-band"></div>
-        <div class="tour"></div>
-        <div class="contact"></div>
+            <ul class="subnav-list">
+              <li class="subnav-item"><a href="!#">Merchandise</a></li>
+              <li class="subnav-item"><a href="!#">Extras</a></li>
+              <li class="subnav-item"><a href="!#">Media</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- End: Navbar -->
+
+        <button class="search-btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
       </div>
+      <!-- End: Header -->
+
+      <!-- Begin: Main -->
+      <div class="main" id="main">
+        <!-- Begin: Slider -->
+        <div class="band-slider">
+          <!-- Use Bootstrap Slider -->
+          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/images/slider/chicago.jpg" class="d-block w-100" alt="chicago" />
+                <div class="carousel-caption d-none d-md-block">
+                  <h3>Chicago</h3>
+                  <p>Thank you, Chicago - A night we won't forget.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/images/slider/los_angeles.jpg"
+                  class="d-block w-100"
+                  alt="los_angeles"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h3>Los Angeles</h3>
+                  <p>We had the best time playing at Venice Beach!</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/images/slider/new_york.jpg"
+                  class="d-block w-100"
+                  alt="new_york"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h3>New York</h3>
+                  <p>The atmosphere in New York is lorem ipsum.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End: Slider -->
+
+        <!-- Begin: The Band -->
+        <div class="the-band" id="the-band">
+          <div class="wrapper">
+            <h3 class="band-title">The band</h3>
+            <p class="band-slogan">We love music</p>
+            <p class="band-description">
+              We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+              commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+              commodo consequat.
+            </p>
+
+            <div class="member-list">
+              <div class="member-item">
+                <h4 class="member-name">Name</h4>
+                <img
+                  src="./assets/images/member/member.jpg"
+                  alt="member_image"
+                  class="member-img"
+                />
+              </div>
+              <div class="member-item">
+                <h4 class="member-name">Name</h4>
+                <img
+                  src="./assets/images/member/member.jpg"
+                  alt="member_image"
+                  class="member-img"
+                />
+              </div>
+              <div class="member-item">
+                <h4 class="member-name">Name</h4>
+                <img
+                  src="./assets/images/member/member.jpg"
+                  alt="member_image"
+                  class="member-img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End: The Band -->
+
+        <!-- Begin: Tour Date -->
+        <div class="tour" id="tour">
+          <div class="wrapper">
+            <h3 class="band-title">Tour dates</h3>
+            <p class="band-slogan">Remember to book your tickets!</p>
+
+            <ul class="ticket-list">
+              <li class="ticket-item">September <span class="sold-out">Sold out</span></li>
+              <li class="ticket-item">October <span class="sold-out">Sold out</span></li>
+              <li class="ticket-item">November<span class="ticket-count">3</span></li>
+            </ul>
+
+            <div class="place-list">
+              <div class="place-item">
+                <img src="./assets/images/place/new_york.jpg" alt="new_york" class="place-img" />
+                <div class="place-content">
+                  <h4 class="place-title">New York</h4>
+                  <p class="place-date">Fri 27 Nov 2016</p>
+                  <p class="place-description">
+                    Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                  </p>
+                  <button class="bbtn">Buy Tickets</button>
+                </div>
+              </div>
+
+              <div class="place-item">
+                <img src="./assets/images/place/paris.jpg" alt="paris" class="place-img" />
+                <div class="place-content">
+                  <h4 class="place-title">Paris</h4>
+                  <p class="place-date">Sat 28 Nov 2016</p>
+                  <p class="place-description">
+                    Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                  </p>
+                  <button class="bbtn">Buy Tickets</button>
+                </div>
+              </div>
+
+              <div class="place-item">
+                <img src="./assets/images/place/sanfran.jpg" alt="sanfran" class="place-img" />
+                <div class="place-content">
+                  <h4 class="place-title">San Francisco</h4>
+                  <p class="place-date">Sun 29 Nov 2016</p>
+                  <p class="place-description">
+                    Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                  </p>
+                  <button class="bbtn">Buy Tickets</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End: Tour Date -->
+
+        <!-- Begin: Contact -->
+        <div class="contact" id="contact">
+          <div class="wrapper">
+            <h3 class="band-title">Contact</h3>
+            <p class="band-slogan">Fan? Drop a note!</p>
+
+            <div class="contact-content">
+              <ul class="contact-info-list">
+                <li class="contact-info-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Chicago, US</span>
+                </li>
+                <li class="contact-info-item">
+                  <i class="fa-solid fa-phone"></i>
+                  <span>Phone: <a href="tel:+496170961709"> +49 6170961709</a></span>
+                </li>
+                <li class="contact-info-item">
+                  <i class="fa-solid fa-envelope"></i>
+                  <span>Email: <a href="mailto:mail@mail.com"> mail@mail.com</a></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- End: Contact -->
+      </div>
+      <!-- End: Main -->
 
       <div class="footer">
-        <div class="map"></div>
-        <div class="info"></div>
+        <div class="footer-map"></div>
+        <div class="footer-info">
+          <ul class="footer-social-list">
+            <li class="footer-social-item">
+              <a href="!#"><i class="fa-brands fa-facebook-square"></i></a>
+            </li>
+            <li class="footer-social-item">
+              <a href="!#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li class="footer-social-item">
+              <a href="!#"><i class="fa-brands fa-snapchat"></i></a>
+            </li>
+            <li class="footer-social-item">
+              <a href="!#"><i class="fa-brands fa-pinterest"></i></a>
+            </li>
+            <li class="footer-social-item">
+              <a href="!#"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li class="footer-social-item">
+              <a href="!#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </li>
+          </ul>
+
+          <div class="footer-copyright">Powered by <a href="!#">Quyen Dang</a></div>
+        </div>
       </div>
     </div>
   </body>

@@ -1,5 +1,9 @@
 # The-band-clone
 ## Author: Dang Tran Quyen
+### Demo
+```
+https://tran-quyen.github.io/the-band-clone/
+```
 
 ### 1.Analyst the web
 1. Header

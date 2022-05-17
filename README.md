@@ -1,6 +1,6 @@
 # The-band-clone
 ## Author: Dang Tran Quyen
-### Demo The Band[The Band](https://tran-quyen.github.io/the-band-clone/).
+### Demo The Band [The Band](https://tran-quyen.github.io/the-band-clone/).
 
 ### 1.Analyst the web
 1. Header

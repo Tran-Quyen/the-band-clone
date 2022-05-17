@@ -63,4 +63,20 @@ $('a[href*="#"]')
     }
   });
 
+// Show navbar and subnav when click
+var navMobileBtn = $('#nav-mobile-btn')[0];
+var navMobileList = $('.nav-mobile-list')[0];
+var moreBtn = $('#more-btn')[0];
+var subnavMobileList = $('.subnav-mobile-list')[0];
+
+function handleToggleNavbar(selector, mode = true) {
+  if (!mode) $(selector).removeClass('active');
+  else $(selector).toggleClass('active');
+}
+
+navMobileBtn.onclick = () => {
+  handleToggleNavbar(navMobileList);
+  handleToggleNavbar(subnavMobileList, false);
+};
+moreBtn.onclick = () => handleToggleNavbar(subnavMobileList);
 

@@ -25,6 +25,7 @@ html {
   font-size: 62.5%;
   line-height: 1.4;
   font-family: 'Lato', sans-serif;
+  scroll-behavior: smooth;
 }
 
 a,
@@ -40,13 +41,19 @@ ul {
 /* Variable */
 :root {
   --header-height: 4.8rem;
+  --hover-clr: #ccc;
 }
 
 /* Common */
 .wrapper {
   padding: 6.4rem 0;
+  max-width: 100%;
   width: 80rem;
   margin: 0 auto;
+}
+
+.active {
+  display: block !important;
 }
 
 .band-title {
@@ -63,6 +70,35 @@ ul {
   opacity: 0.6;
 }
 
+.bbtn {
+  outline: none;
+  border: none;
+  color: #fff;
+  background: #000;
+  padding: 8px 16px;
+}
+
+.bbtn:hover {
+  background: var(--hover-clr);
+  color: #000;
+}
+
+.nav-mobile-link {
+  padding: 0 2.4rem;
+  display: inline-block;
+  color: #fff;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  height: var(--header-height);
+  line-height: var(--header-height);
+}
+
+.nav-mobile-link:hover {
+  color: #000;
+  background: var(--hover-clr);
+}
+
 /* App */
 #app {
   font-size: 1.6rem;
@@ -77,13 +113,16 @@ ul {
   z-index: 1;
   height: var(--header-height);
   background: #000;
+}
+
+/* Navbar */
+.header .nav-desktop {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Navbar */
-.header .nav-list {
+.header .nav-desktop .nav-list {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
@@ -118,7 +157,7 @@ ul {
 
 .header .nav-item:hover > a {
   color: #000;
-  background: #ccc;
+  background: var(--hover-clr);
 }
 
 .header .nav-item:hover > .subnav-list {
@@ -146,7 +185,7 @@ ul {
 }
 
 .header .subnav-item:hover > a {
-  background: #ccc;
+  background: var(--hover-clr);
 }
 
 /* Search Button */
@@ -164,6 +203,72 @@ ul {
   background: #f44336;
 }
 
+/* Navbar mobile */
+.header .nav-mobile {
+  display: none;
+}
+
+.header .nav-mobile .nav-mobile-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .nav-mobile-menu .nav-mobile-home {
+}
+
+.header .nav-mobile-menu .nav-mobile-btn {
+  outline: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  background: transparent;
+  padding: 0 2.4rem;
+  height: var(--header-height);
+  line-height: var(--header-height);
+  cursor: pointer;
+}
+
+.header .nav-mobile-menu .nav-mobile-btn:hover {
+  color: #000;
+  background: var(--hover-clr);
+}
+
+.header .nav-mobile .nav-mobile-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #000;
+}
+
+.header .nav-mobile-list .nav-mobile-item {
+}
+
+.header .nav-mobile-list .nav-mobile-item a {
+  width: 100%;
+}
+
+.header .nav-mobile-item:last-child a {
+  position: relative;
+  cursor: pointer;
+}
+
+.header .nav-mobile-item:last-child a > i {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  left: 7.5rem;
+}
+
+.header .nav-mobile-item .subnav-mobile-list {
+  display: none;
+  padding-left: 1.5rem;
+}
+
+.header .subnav-mobile-list .subnav-mobile-item {
+}
+
 /* Main */
 .main {
   margin-top: var(--header-height);
@@ -175,35 +280,210 @@ ul {
 }
 
 /* The Band */
-.main .the-band .band-description {
+.main .the-band {
+}
+
+.the-band .band-description {
   text-align: justify;
   font-size: 1.5rem;
 }
 
-.main .member-list {
+.the-band .member-list {
   margin: 7rem 0 4.6rem;
   display: flex;
   justify-content: space-between;
 }
 
-.main .member-item {
+.the-band .member-item {
   text-align: center;
   flex: 1 0 calc(100% / 3);
 }
 
-.main .member-name {
+.the-band .member-name {
   margin-bottom: 1.5rem;
 }
 
-.main .member-img {
+.the-band .member-img {
   width: 60%;
 }
 
 /* Tour Date */
-.main .tour{
+.main .tour {
   background: #000;
 }
 
-.main .tour .band-title,.main .tour .band-slogan{
+.tour .band-title,
+.tour .band-slogan {
   color: #fff;
 }
+
+.tour .wrapper .ticket-list {
+  list-style-type: none;
+  background: #fff;
+  margin-bottom: 3.3rem;
+  color: #757575;
+  font-size: 1.5rem;
+}
+
+.tour .ticket-list .ticket-item {
+  position: relative;
+  padding: 8px 1.6rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.tour .ticket-item .sold-out {
+  background: #f44336;
+  color: #fff;
+  padding: 2px 8px;
+  margin-left: 1.6rem;
+}
+
+.tour .ticket-item .ticket-count {
+  --size: 2.5rem;
+  position: absolute;
+  top: 50%;
+  right: 3.2rem;
+  transform: translateY(-50%);
+  display: inline-block;
+  color: #fff;
+  background: #000;
+  width: var(--size);
+  height: var(--size);
+  line-height: var(--size);
+  text-align: center;
+  border-radius: 50%;
+}
+
+.tour .place-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tour .place-list .place-item + .place-item {
+  margin-left: 1.5rem;
+}
+
+.tour .place-list .place-item {
+  width: calc(100% / 3);
+}
+
+.tour .place-item .place-img {
+  width: 100%;
+}
+
+.tour .place-item .place-img:hover {
+  opacity: 0.7;
+}
+
+.tour .place-item .place-content {
+  background: #fff;
+  padding: 1.6rem;
+}
+
+.tour .place-item .place-title {
+  font-weight: bold;
+}
+
+.tour .place-item .place-date {
+  margin: 1.6rem 0;
+  color: #757575;
+}
+
+.tour .place-item .place-description {
+}
+
+.tour .place-item .bbtn {
+}
+
+/* Contact */
+.main .contact {
+}
+
+.contact .wrapper .contact-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+
+.contact .contact-content .contact-info-list {
+  flex: 1;
+  list-style-type: none;
+  font-size: 1.8rem;
+}
+
+.contact .contact-info-list .contact-info-item {
+}
+
+.contact .contact-info-item i {
+  margin-right: 1.5rem;
+}
+
+.contact .contact-info-item a {
+  color: #000;
+}
+
+.contact .contact-form {
+  flex: 1;
+}
+
+.contact .contact-form .form-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.contact .form-wrap .form-input + .form-input {
+  margin-left: 1.5rem;
+}
+
+.contact .form-wrap .form-input {
+  flex: 1;
+  padding: 8px;
+}
+
+.contact .form-wrap:nth-child(3) {
+  justify-content: flex-end;
+}
+
+.contact .form-wrap .bbtn {
+  text-transform: uppercase;
+}
+
+/* Footer */
+.footer {
+}
+
+.footer .footer-map {
+  max-width: 100%;
+  filter: grayscale(50%);
+}
+
+.footer .footer-info {
+  padding: 5rem 0;
+}
+
+.footer .footer-info .footer-social-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+.footer .footer-social-list .footer-social-item + .footer-social-item {
+  margin-left: 8px;
+}
+
+.footer .footer-social-item i {
+  font-size: 2.5rem;
+  color: #666;
+}
+
+.footer .footer-social-item:hover {
+  opacity: 0.5;
+}
+
+.footer .footer-copyright {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
